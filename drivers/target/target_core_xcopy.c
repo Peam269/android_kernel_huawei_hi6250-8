@@ -255,6 +255,7 @@ static int target_xcopy_parse_target_descriptors(struct se_cmd *se_cmd,
 	if (rc < 0)
 		*sense_ret = TCM_COPY_TARGET_DEVICE_NOT_REACHABLE;
 		goto out;
+	}
 
 	pr_debug("XCOPY TGT desc: Source dev: %p NAA IEEE WWN: 0x%16phN\n",
 		 xop->src_dev, &xop->src_tid_wwn[0]);
